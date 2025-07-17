@@ -1,0 +1,42 @@
+### Trae todos los productos
+GET http://127.0.0.1:3003/api/v1/productos
+
+###
+
+### Trae un producto por Id
+GET http://127.0.0.1:3003/api/v1/productos/f84153f1-0270-4900-b5b4-2c424f6d1b9e
+
+###
+
+### Crea un producto (caso feliz)
+POST http://127.0.0.1:3003/api/v1/productos
+Content-Type: application/json
+
+{
+    "nombre": "Cafetera",
+    "stockAmount": 4
+}
+
+###
+
+
+### Crea un producto (caso malo)
+POST http://127.0.0.1:3003/api/v1/productos
+Content-Type: application/json
+
+{
+    "nombre": "Cafetera",
+    "stockAmount": 0
+}
+
+###
+
+###
+PUT http://127.0.0.1:3003/api/v1/productos/f84153f1-0270-4900-b5b4-2c424f6d1b9e
+Content-Type: application/json
+
+{
+    "stockAmount": 4
+}
+
+###
